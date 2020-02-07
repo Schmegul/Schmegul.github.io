@@ -3,8 +3,8 @@ h2{background-color: yellow;
 
 header{
 background-color: red;
-height: 200px;
-width: 600px;
+height: 150px;
+width: 100%;
 
 
 
@@ -13,7 +13,7 @@ nav{
 
 background-color: green;
 height: 50px;
-width: 600px;
+width: 100%;
 
 }
 
@@ -21,20 +21,20 @@ main{
 
 background-color: blue;
 height: 300px;
-width: 400px;
+width: 65%;
 }
 
 aside{
 
 background-color: brown;
 height: 300px;
-width: 200px;
+width: 35%;
 }
 
 footer{
 background-color: orange;
 height: 200px;
-width: 600px;
+width: 100%;
 
 }
 
@@ -44,8 +44,22 @@ display:flex;
 }
 
 #wrapper{
-width:600px;    
+width:100%;
 margin-left: auto;
 margin-right: auto;
+
+}
+@media only screen and (max-width: 600px) {
+    #mainaside{
+      display: flex;
+      flex-direction: column;
+
+    }
+    main{
+      width:100%;
+    }
+    aside{
+      width:100%;
+    }
 
 }
