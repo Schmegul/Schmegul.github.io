@@ -31,9 +31,31 @@
 
             </nav>
             <div id="mainaside">
+
             <main>
-              detta är start sidan
+
+              <div id="mainwrapperwhole">
+              <!--detta är start sidan-->
             <!--  <img src="img/always-check-your-mirrors-when-driving-4-29260832.png"> -->
+            <div id="mainwrapper1">
+              start
+            </div>
+
+              <div id="mainwrapper2">
+                2
+
+                <!--<img src="img/always-check-your-mirrors-when-driving-4-29260832.png" alt="img1">
+              -->
+              </div>
+
+
+          </div>
+        <div id="mainwrapper3">
+            3
+          </div>
+
+
+
             </main>
 
 
@@ -52,6 +74,27 @@
 
 
         </div>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+          <script type="text/javascript">
+            $("#mainwrapper1").click(function(){
+              //console.log("fel");
+              //$("#mainwrapper1").css("background-color","pink");
+
+              $("#mainwrapper2").toggle("slow",function(){
+                //animation complete
+              });
+
+
+            });
+            $("#mainwrapper3").click(function(){
+              $("#mainwrapper1").toggle("slow",function(){
+
+            });
+          });
+
+            </script>
+
   </body>
 
 </html>

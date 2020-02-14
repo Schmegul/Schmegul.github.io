@@ -5,6 +5,7 @@ header{
 background-color: red;
 height: 150px;
 width: 100%;
+color:white;
 
 
 
@@ -39,7 +40,7 @@ width: 100%;
 }
 
 #mainaside{
-display:flex;
+ display:flex;
 
 }
 
@@ -47,8 +48,35 @@ display:flex;
 width:100%;
 margin-left: auto;
 margin-right: auto;
+}
+
+#mainwrapperwhole{
+display:flex;
+height:50%;
+width:100%;
 
 }
+
+#mainwrapper1{
+  height:100%;
+  width:50%;
+  background-color: white;
+
+}
+
+#mainwrapper2{
+background-color: purple;
+height:100%;
+width:50%;
+}
+
+#mainwrapper3{
+background-color: yellow;
+height:50%;
+width:100%;
+}
+
+
 @media only screen and (max-width: 600px) {
     #mainaside{
       display: flex;
