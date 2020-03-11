@@ -1,19 +1,34 @@
 
 
-header{
-background-color: black;
-height: 1525px;
-width: 100%;
-color:white;
-
+body{
+background-color: #b0a178;
 
 
 }
+
+header{
+background-color:#4a473e;
+height: 100px;
+width: auto;
+border-style:double;
+border-width: thick;
+border-color:black;
+margin-bottom: 20px;
+font-size:50px;
+font-family: 'ubuntu';
+}
+
+
+
 nav{
 
-background-color: black;
-height: 50px;
-width: 100%;
+background-color:#4a473e;
+height:450px;
+width:15%;
+border-style:double;
+border-width: thick;
+border-color: black;
+display:column;
 
 }
 
@@ -31,11 +46,77 @@ height: 300px;
 width: 35%;
 }
 
-footer{
+ footer{
 background-color: orange;
 height: 200px;
 width: 100%;
 
+}
+
+a:link{
+text-decoration-line: none;
+
+}
+
+h2{
+font-family:'Roboto';
+text-align:center;
+}
+
+p{
+font-family: 'Roboto';
+margin-left:10px;
+}
+
+
+#text1{
+background-color:white;
+height:450px;
+width:30%;
+border-style:double;
+border-width:thick;
+border-color: black;
+margin-left:4%
+}
+
+#källor{
+
+background-color:#4a473e;
+height:450px;
+width:15%;
+border-style:double;
+border-width: thick;
+border-color: black;
+display:column;
+margin-left:3%;
+font-size: 20px;
+font-family: 'ubuntu';
+text-align:center;
+
+}
+
+
+
+#helanav{
+display:flex;
+width:100%;
+
+}
+
+#bild1{
+  display:flex;
+background-color:white;
+height:450px;
+width:30%;
+border-style: double;
+border-width:thick;
+border-color: black;
+margin-left: 3%;
+align-items: center;
+}
+
+#bild2{
+vertical-align: middle;
 }
 
 #mainaside{
@@ -47,6 +128,7 @@ width: 100%;
 width:100%;
 margin-left: auto;
 margin-right: auto;
+
 }
 
 #mainwrapperwhole{
@@ -55,6 +137,187 @@ height:50%;
 width:100%;
 
 }
+
+#insidehead{
+height:90%;
+width: 95%;
+background-color: black;
+color: white;
+border-style: solid;
+border-width:5% 5% 5% ;
+border-color: grey;
+
+
+}
+
+#linkmain{
+
+font-size: 20px;
+font-family: 'ubuntu';
+text-align:center;
+}
+
+
+#start1{
+height: 55%;
+width: 80%;
+background-color:black;
+margin-right: 20px;
+margin-left:11%;
+margin-top:15.5%;
+border-radius:80px;
+transition:0.2s;
+
+}
+#start1:hover{
+width:90%;
+height:100%;
+margin-left:6%;
+font-size: 22px;
+margin-top:15%;
+color:#ef63ff;
+}
+
+#chassi1{
+height: 55%;
+width: 80%;
+background-color:black;
+margin-right: 20px;
+margin-left:11%;
+margin-top:15.5%;
+border-radius:80px;
+transition:0.2s;
+}
+
+#chassi1:hover{
+width:90%;
+height:100%;
+margin-left:6%;
+font-size: 22px;
+margin-top:15%;
+color:#ef63ff;
+}
+
+#cpu1{
+height: 55%;
+width: 80%;
+background-color:black;
+margin-right: 20px;
+margin-left:11%;
+margin-top:15.5%;
+border-radius:80px;
+transition:0.2s;
+}
+
+#cpu1:hover{
+width:90%;
+height:100%;
+margin-left:6%;
+font-size: 22px;
+margin-top:15%;
+color:#ef63ff;
+}
+
+#gpu1{
+height: 55%;
+width: 80%;
+background-color:black;
+margin-right: 20px;
+margin-left:11%;
+margin-top:15.5%;
+border-radius:80px;
+transition:0.2s;
+}
+
+#gpu1:hover{
+width:90%;
+height:100%;
+margin-left:6%;
+font-size: 22px;
+margin-top:15%;
+color:#ef63ff;
+}
+
+#ram1{
+height: 55%;
+width: 80%;
+background-color:black;
+margin-right: 20px;
+margin-left:11%;
+margin-top:15.5%;
+border-radius:80px;
+transition:0.2s;
+}
+
+#ram1:hover{
+width:90%;
+height:100%;
+margin-left:6%;
+font-size: 22px;
+margin-top:15%;
+color:#ef63ff;
+}
+
+#nätaggregat1{
+height: 55%;
+width: 80%;
+background-color:black;
+margin-right: 20px;
+margin-left:11%;
+margin-top:15.5%;
+border-radius:80px;
+transition:0.2s;
+}
+
+#nätaggregat1:hover{
+width:90%;
+height:100%;
+margin-left:6%;
+font-size: 22px;
+margin-top:15%;
+color:#ef63ff;
+}
+
+#moderkort1{
+height: 55%;
+width: 80%;
+background-color:black;
+margin-right: 20px;
+margin-left:11%;
+margin-top:15.5%;
+border-radius:80px;
+transition:0.2s;
+}
+
+#moderkort1:hover{
+width:90%;
+height:100%;
+margin-left:6%;
+font-size: 22px;
+margin-top:15%;
+color:#ef63ff;
+}
+
+#grafikkort1{
+height: 55%;
+width: 80%;
+background-color:black;
+margin-right: 20px;
+margin-left:11%;
+margin-top:15.5%;
+border-radius:80px;
+transition:0.2s;
+}
+
+#grafikkort1:hover{
+width:90%;
+height:100%;
+margin-left:6%;
+font-size: 22px;
+margin-top:15%;
+color:#ef63ff;
+}
+
 
 #mainwrapper1{
   height:100%;
@@ -75,8 +338,168 @@ height:50%;
 width:100%;
 }
 
+#kchassi{
+height: 55%;
+width: 80%;
+background-color:black;
+margin-right: 20px;
+margin-left:11%;
+margin-top:15.5%;
+border-radius:80px;
+transition:0.2s;
+}
 
-@media only screen and (max-width: 600px) {
+#kchassi:hover{
+width:90%;
+height:100%;
+margin-left:6%;
+font-size: 22px;
+margin-top:15%;
+color:#ef63ff;
+}
+
+#kcpu{
+height: 55%;
+width: 80%;
+background-color:black;
+margin-right: 20px;
+margin-left:11%;
+margin-top:15.5%;
+border-radius:80px;
+transition:0.2s;
+}
+
+#kcpu:hover{
+width:90%;
+height:100%;
+margin-left:6%;
+font-size: 22px;
+margin-top:15%;
+color:#ef63ff;
+}
+
+#kgpu{
+height: 55%;
+width: 80%;
+background-color:black;
+margin-right: 20px;
+margin-left:11%;
+margin-top:15.5%;
+border-radius:80px;
+transition:0.2s;
+}
+
+#kgpu:hover{
+width:90%;
+height:100%;
+margin-left:6%;
+font-size: 22px;
+margin-top:15%;
+color:#ef63ff;
+}
+
+#kram{
+height: 55%;
+width: 80%;
+background-color:black;
+margin-right: 20px;
+margin-left:11%;
+margin-top:15.5%;
+border-radius:80px;
+transition:0.2s;
+}
+
+#kram:hover{
+width:90%;
+height:100%;
+margin-left:6%;
+font-size: 22px;
+margin-top:15%;
+color:#ef63ff;
+}
+
+#knätaggregat{
+height: 55%;
+width: 80%;
+background-color:black;
+margin-right: 20px;
+margin-left:11%;
+margin-top:15.5%;
+border-radius:80px;
+transition:0.2s;
+}
+
+#knätaggregat:hover{
+width:90%;
+height:100%;
+margin-left:6%;
+font-size: 22px;
+margin-top:15%;
+color:#ef63ff;
+}
+
+#kmoderkort{
+height: 55%;
+width: 80%;
+background-color:black;
+margin-right: 20px;
+margin-left:11%;
+margin-top:15.5%;
+border-radius:80px;
+transition:0.2s;
+}
+
+#kmoderkort:hover{
+width:90%;
+height:100%;
+margin-left:6%;
+font-size: 22px;
+margin-top:15%;
+color:#ef63ff;
+}
+
+#kgrafikkort{
+height: 55%;
+width: 80%;
+background-color:black;
+margin-right: 20px;
+margin-left:11%;
+margin-top:15.5%;
+border-radius:80px;
+transition:0.2s;
+}
+
+#kgrafikkort:hover{
+width:90%;
+height:100%;
+margin-left:6%;
+font-size: 22px;
+margin-top:15%;
+color:#ef63ff;
+}
+
+#humor{
+height: 55%;
+width: 80%;
+background-color:black;
+margin-right: 20px;
+margin-left:11%;
+margin-top:15.5%;
+border-radius:80px;
+transition:0.2s;
+}
+
+#humor:hover{
+width:90%;
+height:100%;
+margin-left:6%;
+font-size: 22px;
+margin-top:15%;
+color:#ef63ff;
+}
+
+
+/*@media only screen and (max-width: 600px) {
     #mainaside{
       display: flex;
       flex-direction: column;
@@ -90,3 +513,4 @@ width:100%;
     }
 
 }
+*/
