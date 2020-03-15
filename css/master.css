@@ -7,6 +7,7 @@ background-color: #b0a178;
 }
 
 header{
+display:flex;
 background-color:#4a473e;
 height: 100px;
 width: auto;
@@ -16,8 +17,16 @@ border-color:black;
 margin-bottom: 20px;
 font-size:50px;
 font-family: 'ubuntu';
+align-items: center;
+text-align: center;
+
 }
 
+#headerinfo{
+display:flex;
+justify-content:space-around;
+width:100%;
+}
 
 
 nav{
@@ -29,27 +38,6 @@ border-style:double;
 border-width: thick;
 border-color: black;
 display:column;
-
-}
-
-main{
-
-background-color: blue;
-height: 300px;
-width: 65%;
-}
-
-aside{
-
-background-color: brown;
-height: 300px;
-width: 35%;
-}
-
- footer{
-background-color: orange;
-height: 200px;
-width: 100%;
 
 }
 
@@ -104,7 +92,7 @@ width:100%;
 }
 
 #bild1{
-  display:flex;
+display:flex;
 background-color:white;
 height:450px;
 width:30%;
@@ -113,16 +101,10 @@ border-width:thick;
 border-color: black;
 margin-left: 3%;
 align-items: center;
-}
-
-#bild2{
-vertical-align: middle;
-}
-
-#mainaside{
- display:flex;
 
 }
+
+
 
 #wrapper{
 width:100%;
@@ -497,20 +479,3 @@ font-size: 22px;
 margin-top:15%;
 color:#ef63ff;
 }
-
-
-/*@media only screen and (max-width: 600px) {
-    #mainaside{
-      display: flex;
-      flex-direction: column;
-
-    }
-    main{
-      width:100%;
-    }
-    aside{
-      width:100%;
-    }
-
-}
-*/
