@@ -58,7 +58,7 @@ margin-left:10px;
 
 #text1{
 background-color:white;
-height:100%;
+height:100%auto;
 width:30%;
 border-style:double;
 border-width:thick;
@@ -69,7 +69,7 @@ margin-left:4%
 #källor{
 
 background-color:#4a473e;
-height:450px;
+height:100%auto;
 width:15%;
 border-style:double;
 border-width: thick;
