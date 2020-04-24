@@ -2,7 +2,7 @@
 
 body{
 background-color: #b0a178;
-
+height:100%;
 
 }
 
@@ -58,7 +58,7 @@ margin-left:10px;
 
 #text1{
 background-color:white;
-height:100%auto;
+height:1000px;
 width:30%;
 border-style:double;
 border-width:thick;
@@ -109,7 +109,7 @@ align-items: center;
 width:100%;
 margin-left: auto;
 margin-right: auto;
-
+height:100%;
 }
 
 #mainwrapperwhole{
