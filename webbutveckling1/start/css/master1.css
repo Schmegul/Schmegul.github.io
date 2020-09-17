@@ -1,0 +1,27 @@
+h1{
+color:green;
+
+}
+
+#ruta1{
+float:left;
+width: 100px;
+height: 100px;
+background-color:green;
+
+
+}
+#ruta2{
+float:left;
+width: 100px;
+height: 100px;
+background-color:blue;
+
+}
+
+#ruta3{
+clear:left;
+width:100px;
+height:100px;
+background-color:purple;
+}

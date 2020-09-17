@@ -1,0 +1,76 @@
+
+
+#wrapper{
+  width:80%;
+  margin-left: auto;
+  margin-right: auto;
+
+
+
+}
+
+header{
+  width:100%;
+  height:200px;
+  background-color:#FF80ED;
+  position:relative;
+}
+nav{
+  position: absolute;
+  bottom:0px;
+
+}
+
+
+#left{
+  width:20%;
+  height:400px;
+  background-color:#9274E8;
+
+}
+#right{
+  width:20%;
+  height:400px;
+  background-color:#9274E8;
+}
+
+main{
+  width:60%;
+  height:400px;
+  background-color:#C98DFF;
+
+}
+footer{
+  width:100%;
+  height:100px;
+  background-color:#FF80ED;
+}
+
+
+#container{
+  display:flex;
+}
+
+@media screen and (max-width:500px){
+  /*gör så att reglerna ovan bara gäller om skärmen är max 500px*/
+  #wrapper{
+    width:100%;
+
+  }
+  #container{
+    flex-direction:column;
+  }
+
+  #left{
+    width:100%;
+  }
+  
+  main{
+    width:100%;
+  }
+
+  #right{
+    width:100%;
+
+  }
+}
