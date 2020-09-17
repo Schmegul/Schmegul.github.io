@@ -1,0 +1,48 @@
+body{
+  flex-wrap: wrap;
+}
+
+#wrapper{
+  width:80%;
+  margin-left: auto;
+  margin-right: auto;
+
+
+
+}
+#container{
+display:flex;
+flex-wrap: wrap;
+justify-content: space-around;
+}
+
+header{
+  width:100%;
+  height:200px;
+  background-color:#FF80ED;
+
+
+}
+
+article{
+height:175px;
+width:175px;
+margin-top: 20px;
+background-color:magenta;
+
+}
+
+@media screen and (max-width:500px){
+  /*gör så att reglerna ovan bara gäller om skärmen är max 500px*/
+  #wrapper{
+    width:100%;
+
+  }
+  #container{
+    flex-direction:column;
+
+  }
+  article{
+    width:100%;
+  }
+}
