@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta charset="utf-8">
+    <title>cringeslidercringe</title>
+    <style media="screen">
+
+body{background-color:skyblue}
+.yesJava{
+  height:600px;
+  width:600px;
+  border:5px solid grey;
+  z-index:10;
+  top:30px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  position: relative;
+  display: none;
+  border-radius: 15px;
+}
+.noJava{
+  top:200px;
+  display: flex;
+  position: relative;
+  justify-content: space-evenly;
+}
+.pictures{
+  display:flex;
+  z-index: 0;
+  position: relative;
+}
+#pilVänster,#pilHöger{
+  position: absolute;
+  top:285px;
+  z-index: 20;
+  height:30px;
+  width:30px;
+  cursor: pointer;
+}
+#pilVänster{left:20px;}#pilHöger{right:20px;}
+.dottedDot,.solid{
+  position:absolute;
+  z-index: 30;
+  cursor: pointer;
+}
+.dottedDot{top:564px;}.solid{top:562px;}
+    </style>
+
+  </head>
+  <body>
+    <!-- Om java är av -->
+    <article class="noJava">
+      <img src="bilder/bild1.png" alt="cringe1" width="200px" height="200px" border="5 solid">
+      <img src="bilder/bild2.png" alt="cringe2" width="200px" height="200px" border="5 solid">
+      <img src="bilder/bild3.jpg" alt="cringe3" width="200px" height="200px" border="5 solid">
+    </article>
+
+
+    <!-- Om java är på -->
+<article class="yesJava">
+
+  <!-- Prickdelen för att veta vilken sida man är på -->
+  <img id="dottedLeft" class="dottedDot" src="bilder/dotted.png" alt="cringe1" style="left:263px">
+  <img id="dottedMid" class="dottedDot" src="bilder/dotted.png" alt="cringe1" style="left:292px">
+  <img id="dottedRight" class="dottedDot" src="bilder/dotted.png" alt="cringe1" style="left:321px">
+  <img id="solidLeft" class="solid" src="bilder/solid.png" alt="cringe1" style="left:261px">
+  <img id="solidMid" class="solid" src="bilder/solid.png" alt="cringe1" style="left:290px">
+  <img id="solidRight" class="solid" src="bilder/solid.png" alt="cringe1" style="left:319px">
+
+  <!-- Pildelen för att kunna byta sida -->
+  <div id="pilVänster"><img src="bilder/chevleft.png" alt=""></div>
+  <div id="pilHöger"><img src="bilder/chevright.png" alt=""></div>
+
+  <!-- Bilddelen som innehåller de olika bilderna -->
+  <article class="pictures">
+    <img src="bilder/bild3.jpg" alt="cringe3">
+    <img src="bilder/bild1.png" alt="cringe1">
+    <img src="bilder/bild2.png" alt="cringe2">
+    <img src="bilder/bild3.jpg" alt="cringe3">
+    <img src="bilder/bild1.png" alt="cringe1">
+    </article>
+
+
+  </article>
+
+
+
+
+  <script <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+    var i=1;  // sidnummer, börjar på sida 1
+    var solid1=$("#solidLeft");
+    var solid2=$("#solidMid");
+    var solid3=$("#solidRight");
+    var arrowLeft=$("#pilVänster");
+    var arrowRight=$("#pilHöger");
+    var bilder=$(".pictures");
+    $(".yesJava").show();
+    $(".noJava").hide();
+    $(".solid").hide();
+    solid1.show();
+    bilder.css("left", "-=600");  // ser till så att man börjar på sida 1 och inte 3
+    arrowLeft.on( "click", fuu );  // kod från daniel
+    arrowRight.on( "click", foo );
+
+//---------------------------------------------------------------
+
+    function foo(){
+      arrowRight.off( "click",  foo );  // kod från daniel
+    i++;
+      if(i==4){
+        bilder.css("left", "0");  // tar bildspelet från sida 3 till sida 1
+        i=1;
+      }
+      console.log(i);
+      if(i==1){solid1.show();solid2.hide();solid3.hide();} // ändrar vilken prick som är ifylld beroende på vilken sida man är på
+      if(i==2){solid1.hide();solid2.show();solid3.hide();} // -||-
+      if(i==3){solid1.hide();solid2.hide();solid3.show();} // -||-
+
+      bilder.animate({  // flyttar bildspelet ett steg åt höger
+        'left' : "-=600px"
+
+      },function(){
+        arrowRight.on( "click",  foo );  // delay som gör så att bildspelet inte går sönder
+      });
+    }
+
+//---------------------------------------------------------------
+
+    function fuu(){
+      arrowLeft.off( "click",  fuu );  // kod från daniel
+      i--;
+      if(i==-1){
+        bilder.css("left", "-=1800");  // tar bildspelet från sida 3 till sida 2
+        i=2;
+      }
+      console.log(i);
+      if(i==1){solid1.show();solid2.hide();solid3.hide();} // ändrar vilken prick som är ifylld beroende på vilken sida man är på
+      if(i==2){solid1.hide();solid2.show();solid3.hide();} // -||-
+      if(i==0){solid1.hide();solid2.hide();solid3.show();} // -||-
+
+      bilder.animate({  // flyttar bildspelet ett steg åt vänster
+        'left' : "+=600px"
+      },function(){
+        arrowLeft.on( "click",  fuu );  // delay som gör så att bildspelet inte går sönder
+      });
+    }
+
+//---------------------------------------------------------------
+
+    $("#dottedLeft").click(function(){bilder.css("left", "-600px");i=1;
+    solid1.show();solid2.hide();solid3.hide(); // byter sida till pricken man klickat på
+  });
+    $("#dottedMid").click(function(){bilder.css("left", "-1200px");i=2;
+    solid1.hide();solid2.show();solid3.hide(); // byter sida till pricken man klickat på
+  });
+    $("#dottedRight").click(function(){bilder.css("left", "-1800px");i=3;
+    solid1.hide();solid2.hide();solid3.show(); // byter sida till pricken man klickat på
+  });
+
+</script>
+  </body>
+</html>

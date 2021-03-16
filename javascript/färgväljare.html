@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <style> /* här till: */
+    #diveru{
+      display:none;
+    }
+    </style>
+  </head>
+  <body>
+    <div id=diveru>
+    <form>
+      <label for="färg">Välj färg:</label>
+
+      <input type="color" name="c" id="färg">
+
+</form>
+
+  <button type="button" id="colorbutton" name="button">Välj färg </button>
+</div>    <!-- till hit tar bort allt-->
+
+  </body>
+
+  <script>
+document.getElementById("diveru").style.display ="block"; //lägger till allt om javascript är på
+
+var b=localStorage.getItem("color");
+
+document.body.style.backgroundColor = b;
+
+document.getElementById("colorbutton").addEventListener("click",changebackground);
+
+function changebackground(){
+
+
+
+var x=document.getElementById("färg").value;
+document.body.style.backgroundColor = x;
+console.log(x);
+localStorage.setItem("color",x);
+
+
+
+  // hämta färgen från färgväljaren
+  // ändra backgrundsfrgen på sidan documents.body.css
+  // uppgift 2
+  // lagra färgen i localstorage
+  // hämta färgen och sätta den direkt när sidan laddas
+}
+
+  </script>
+
+
+
+</html>
