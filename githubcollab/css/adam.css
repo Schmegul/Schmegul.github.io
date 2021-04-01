@@ -1,0 +1,117 @@
+body{
+  padding:0;
+  margin:0;
+}
+nav{
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: lightgray;
+  position: fixed;
+  width:100%;
+  z-index: 163;
+  top:0;
+}
+
+.logo{
+  color: dodgerblue;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 22px;
+}
+#return{
+  display:none;
+}
+#menu{
+  display:flex;
+  color: red;
+  justify-content:space-around;
+  width:35%;
+}
+
+#menu li{
+  list-style: none;
+}
+
+#menu a{
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 20px;
+  color:blue;
+}
+
+#burger div{
+  width:25px;
+  height:5px;
+  background-color:white;
+  margin: 5px;
+}
+
+#burger{
+  display:none;
+}
+footer h2{
+  font-size:1.5rem;
+  margin-left: 5%;
+  margin-top: 2%;
+  z-index:200;
+}
+header{
+  top:50px;
+  position: absolute;
+  width:100%;
+  text-align:center;
+  z-index:135;
+  left:0;
+}
+
+header h2{
+  font-size:2rem;
+}
+
+@media screen and (max-width: 850px){
+#burger{
+  color: dodgerblue;
+  display:block;
+ }
+#menu{
+  display:flex;
+  flex-direction:column;
+  /*top:20px;*/
+  width:100vw;
+  text-align:center;
+  position: fixed;
+  margin-top:0;
+  background-color: dodgerblue;
+  height:100vh;
+  z-index:165;
+  right:-100%;
+  top: 0;
+  transition: 0.5s;
+}
+#menu:target{
+    right: 0;
+  }
+#menu li a{
+  font-size:1.25rem;
+  color:black;
+  z-index:165;
+
+}
+#return{
+  display:inline;
+  color: black;
+}
+nav{
+  position: fixed;
+  width:100%;
+  top:0;
+  z-index:165;
+  border-bottom: 2px solid black;
+}
+header{
+  top:100px;
+}
+}

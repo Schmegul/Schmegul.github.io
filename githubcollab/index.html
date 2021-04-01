@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/adam.css">
+  <link rel="stylesheet" href="css/jonathan.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solceller</title>
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <h4>Solceller</h4>
+    </div>
+    <ul class="menu" id="menu">
+      <li><a href="#">Hem</a></li>
+      <li><a href="#">Produkter</a></li>
+      <li><a href="#">Kontakta oss</a></li>
+      <a id="return" class="close" href="#">
+        <span class="material-icons">
+          close
+        </span>
+      </a>
+    </ul>
+    <a id="burger" class="hamburger"  href="#menu">
+      <span class="material-icons">
+        menu
+      </span>
+    </a>
+  </nav>
+  <header>
+    <h2>Ledande företag inom solcellspaneler</h2>
+  </header>
+  <main>
+    <!-- Om java är av -->
+    <article class="noJava">
+      <img class="njb" src="bilder/solcell13.jpg" alt="cringe1" style="margin-top:70px;">
+      <img class="njb" src="bilder/solcell23.jpg" alt="cringe2">
+      <img class="njb" src="bilder/solcell33.jpg" alt="cringe3" style="margin-bottom:50px">
+    </article>
+
+    <article class="footer2nd">
+      <h2>Email: test@gmail.com <br>
+      PhoneNumber: 073-13371337
+      </h2>
+
+    </article>
+
+    <!-- Om java är på -->
+    <article class="yesJava">
+
+      <!-- Bilddelen som innehåller de olika bilderna -->
+      <article class="pictures">
+        <img src="bilder/solcell33.jpg" alt="cringe3">
+        <img src="bilder/solcell13.jpg" alt="cringe1">
+        <img src="bilder/solcell23.jpg" alt="cringe2">
+        <img src="bilder/solcell33.jpg" alt="cringe3">
+        <img src="bilder/solcell13.jpg" alt="cringe1">
+      </article>
+
+
+    </article>
+    <article class="fakeYesJava">
+      <!-- Pildelen för att kunna byta sida -->
+      <div id="pilVänster"><img src="bilder/chevleft.png" alt=""></div>
+      <div id="pilHöger"><img src="bilder/chevright.png" alt=""></div>
+
+      <!-- Prickdelen för att veta vilken sida man är på -->
+      <img id="dottedLeft" class="dottedDot" src="bilder/dotted.png" alt="cringe1" style="left:513px">
+      <img id="dottedMid" class="dottedDot" src="bilder/dotted.png" alt="cringe1" style="left:542px">
+      <img id="dottedRight" class="dottedDot" src="bilder/dotted.png" alt="cringe1" style="left:571px">
+      <img id="solidLeft" class="solid" src="bilder/solid.png" alt="cringe1" style="left:511px">
+      <img id="solidMid" class="solid" src="bilder/solid.png" alt="cringe1" style="left:540px">
+      <img id="solidRight" class="solid" src="bilder/solid.png" alt="cringe1" style="left:569px">
+
+    </article>
+  </main>
+  <footer>
+<h2>Email: test@gmail.com <br>
+PhoneNumber: 073-13371337
+</h2>
+
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+  function showNoJava() {
+    if ( $(window).width() < 739) {
+      $(".yesJava").hide();
+      $(".fakeYesJava").hide();
+      $("footer").hide();
+      $(".noJava").show();
+      $(".solid").show();
+      $(".footer2nd").show();
+    }
+  }
+  window.addEventListener('resize', showNoJava);
+
+  if ( $(window).width() > 739) {
+    var i=1;  // sidnummer, börjar på sida 1
+    var solid1=$("#solidLeft");
+    var solid2=$("#solidMid");
+    var solid3=$("#solidRight");
+    var arrowLeft=$("#pilVänster");
+    var arrowRight=$("#pilHöger");
+    var bilder=$(".pictures");
+    $(".yesJava").show();
+    $(".fakeYesJava").show();
+    $("footer").show();
+    $(".noJava").hide();
+    $(".solid").hide();
+    $(".footer2nd").hide();
+    solid1.show();
+    bilder.css("left", "-=1100");  // ser till så att man börjar på sida 1 och inte 3
+    arrowLeft.on( "click", fuu );
+    arrowRight.on( "click", foo );
+
+    //---------------------------------------------------------------
+
+    function foo(){
+      arrowRight.off( "click",  foo );
+      i++;
+      if(i==4){
+        bilder.css("left", "0");  // tar bildspelet från sida 3 till sida 1
+        i=1;
+      }
+      console.log(i);
+      if(i==1){solid1.show();solid2.hide();solid3.hide();} // ändrar vilken prick som är ifylld beroende på vilken sida man är på
+      if(i==2){solid1.hide();solid2.show();solid3.hide();} // -||-
+      if(i==3){solid1.hide();solid2.hide();solid3.show();} // -||-
+
+      bilder.animate({  // flyttar bildspelet ett steg åt höger
+        'left' : "-=1100px"
+
+      },function(){
+        arrowRight.on( "click",  foo );  // delay som gör så att bildspelet inte går sönder
+      });
+    }
+
+    //---------------------------------------------------------------
+
+    function fuu(){
+      arrowLeft.off( "click",  fuu );
+      i--;
+      if(i==-1){
+        bilder.css("left", "-=3300");  // tar bildspelet från sida 3 till sida 2
+        i=2;
+      }
+      console.log(i);
+      if(i==1){solid1.show();solid2.hide();solid3.hide();} // ändrar vilken prick som är ifylld beroende på vilken sida man är på
+      if(i==2){solid1.hide();solid2.show();solid3.hide();} // -||-
+      if(i==0){solid1.hide();solid2.hide();solid3.show();} // -||-
+
+      bilder.animate({  // flyttar bildspelet ett steg åt vänster
+        'left' : "+=1100px"
+      },function(){
+        arrowLeft.on( "click",  fuu );  // delay som gör så att bildspelet inte går sönder
+      });
+    }
+
+    //---------------------------------------------------------------
+
+    $("#dottedLeft").click(function(){bilder.css("left", "-1100px");i=1;
+    solid1.show();solid2.hide();solid3.hide(); // byter sida till pricken man klickat på
+  });
+  $("#dottedMid").click(function(){bilder.css("left", "-2200px");i=2;
+  solid1.hide();solid2.show();solid3.hide(); // byter sida till pricken man klickat på
+});
+$("#dottedRight").click(function(){bilder.css("left", "-3300px");i=3;
+solid1.hide();solid2.hide();solid3.show(); // byter sida till pricken man klickat på
+});
+}
+/*
+var burgerbutton=document.getElementById("burger")
+var navlinks=document.getElementById("nav-links")
+burgerbutton.addEventListener("click",()=>{
+  if (navlinks.style.right=="-150vw"){
+    navlinks.style.right="0"
+  }else{
+    navlinks.style.right="-150vw"
+  }
+})*/
+</script>
+</body>
+</html>

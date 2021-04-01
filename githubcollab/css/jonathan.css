@@ -1,0 +1,143 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+main{
+height:700px;
+width:100%;
+border-top: 2px solid black;
+margin-top:200px;
+}
+
+footer{
+	height:100px;
+	width:100%;
+	background-color:lightgrey;
+	display:none;
+	border-top: 2px solid black;
+}
+
+.footer2nd{
+	height:100px;
+	width:100%;
+	background-color:lightgrey;
+	position: relative;
+	border-top: 2px solid black;
+}
+
+h2{
+	font-size:1.5rem;
+	margin-left: 5%;
+	margin-top: 2%;
+	z-index:200;
+}
+
+.njb{
+	border:2px solid black;
+	border-radius: 15px;
+	height:600px;
+	width:1100px;
+	z-index:120;
+	margin-top:30px;
+	left:0;
+	right:0;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.yesJava{
+  height:600px;
+  width:1100px;
+  border:2px solid black;
+  z-index:10;
+  top:70px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow:hidden;
+  position: relative;
+  display: none;
+  border-radius: 15px;
+}
+.fakeYesJava{
+height:600px;
+width:1100px;
+z-index:120;
+top:30px;
+left:0;
+right:0;
+margin-left: auto;
+margin-right: auto;
+position: absolute;
+display: none;
+}
+.noJava{
+  display:flex;
+	flex-direction: column;
+}
+.pictures{
+  display:flex;
+  z-index: 0;
+  position: relative;
+}
+#pilVänster,#pilHöger{
+  position: absolute;
+  top:485px;
+  z-index: 20;
+  height:30px;
+  width:30px;
+  cursor: pointer;
+}
+#pilVänster{left:-63px;}#pilHöger{right:-60px;}
+.dottedDot,.solid{
+  position:absolute;
+  z-index: 30;
+  cursor: pointer;
+}
+.dottedDot{top:764px;}.solid{top:762px;}
+
+
+@media only screen and (max-width: 739px) {
+
+	.footer2nd{
+		height:80px;
+		width:100%;
+		background-color: lightgrey;
+		position: relative;
+		border-top: 2px solid black;
+	}
+
+	.njb{
+		border:2px solid black;
+		border-radius: 15px;
+		height:34vh;
+		width:80vw;
+		z-index:120;
+		margin-top:30px;
+		left:0;
+		right:0;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+
+
+
+
+}
