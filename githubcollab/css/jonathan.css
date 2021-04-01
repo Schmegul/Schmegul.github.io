@@ -96,7 +96,7 @@ display: none;
   z-index: 0;
   position: relative;
 }
-#pilVänster,#pilHöger{
+#pilVanster,#pilHoger{
   position: absolute;
   top:485px;
   z-index: 20;
@@ -104,7 +104,7 @@ display: none;
   width:30px;
   cursor: pointer;
 }
-#pilVänster{left:-63px;}#pilHöger{right:-60px;}
+#pilVanster{left:-63px;}#pilHoger{right:-60px;}
 .dottedDot,.solid{
   position:absolute;
   z-index: 30;
