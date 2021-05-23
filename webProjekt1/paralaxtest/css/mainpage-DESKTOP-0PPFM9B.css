@@ -1,0 +1,99 @@
+
+@font-face {
+  font-family: 'MyWebFont';
+  src: url('bignoodletoo.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+   url('bignoodletoo.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
+body,html{
+  height:100%;
+  margin:0px;
+  text-align:center;
+
+}
+.cringe1{
+  background: url(../imgsecond/keepittoyourself_1000.png);
+  height: 80%;
+
+}
+.cringe2{
+  background: url(../imgsecond/gifashe.gif);
+  height: 80%;
+}
+.cringe3{
+  background: url(../imgsecond/keepittoyourself_1150.png);
+  height: 80%;
+}
+.cringe4{
+  background: url(../imgsecond/eich2.jpg);
+  height:100%;
+  width: auto;
+  display:flex;
+  background-repeat:no-repeat;
+  background-size:cover;
+  font-size: 80px;
+}
+.cringe5{
+  background: url(../imgsecond/hananight.jpg);
+  height:250%;
+  /* display: flex; */
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  /* egg */
+}
+.videos{
+  height:40%;
+  width:auto;
+}
+.container{
+  height:100%;
+  width: 100%;
+  display:flex;
+  justify-content: space-evenly;
+  font-family: 'MyWebFont';
+  color: white;
+  letter-spacing: 3px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.cringe{
+  margin-top: auto;
+  margin-bottom: auto;
+  height:50%;
+  width:100%;
+  /* margin-top:10%; */
+  transition: 0.5s;
+  font-family: 'MyWebFont';
+}
+
+.cringe:hover{
+  height:60%;
+  transition: 0.5s;
+  cursor: pointer;
+  font-size: 96px;
+}
+
+.images{
+  height:100%;
+  margin-top: -20%;
+  width:auto;
+}
+
+h3{
+  margin-top: -50px;
+  margin-bottom: 130px;
+  width:auto;
+}
+
+.cringe1,.cringe2,.cringe3,.cringe5{
+  position:relative;
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+}
+img.stikd {
+position: sticky;
+top: 33%;
+margin-bottom:10px;
+}
