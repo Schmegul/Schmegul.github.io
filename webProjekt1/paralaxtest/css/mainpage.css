@@ -2,7 +2,7 @@
 @font-face {
   font-family: 'MyWebFont';
   src: url('bignoodletoo.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-   url('bignoodletoo.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+  url('bignoodletoo.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
 }
 
 body,html{
@@ -29,20 +29,20 @@ footer{
   opacity: 0;
   left:0;
 }
-.cringe1{
+.segment1{
   background: url(../imgsecond/keepittoyourself_1000.png);
   height: 100%;
 
 }
-.cringe2{
+.segment2{
   background: url(../imgsecond/gifashe.gif);
   height: 80%;
 }
-.cringe3{
+.segment3{
   background: url(../imgsecond/keepittoyourself_1200.png);
   height: 80%;
 }
-.cringe4{
+.classSelection{
   background: url(../imgsecond/eich2.jpg);
   height:100%;
   width: auto;
@@ -67,9 +67,9 @@ section{
   border-bottom: solid black 5px;
 }
 
-#cringe5{
-    height:350%;
-    z-index: 1;
+#videoSelection{
+  height:350%;
+  z-index: 1;
 }
 .role{
   width:100%;
@@ -118,7 +118,7 @@ section{
   display: none;
 }
 
-.cringe{
+.ltank{
   margin-top: auto;
   margin-bottom: auto;
   height:50%;
@@ -127,7 +127,7 @@ section{
   font-family: 'MyWebFont';
 }
 
-.cringe:hover{
+.ltank:hover{
   height:60%;
   transition: 0.5s;
   cursor: pointer;
@@ -146,7 +146,7 @@ h3{
   width:auto;
 }
 
-.cringe1,.cringe2,.cringe3,#cringe5{
+.segment1,.segment2,.segment3,#videoSelection{
   position:relative;
   background-position:center;
   background-size:cover;
@@ -154,9 +154,9 @@ h3{
   background-attachment:fixed;
 }
 img.stikd {
-position: sticky;
-top: 33%;
-margin-bottom:10px;
+  position: sticky;
+  top: 33%;
+  margin-bottom:10px;
 }
 
 #background{
@@ -164,52 +164,52 @@ margin-bottom:10px;
   height:100%;
   width:100%;
   z-index: -100;
-    background: url(../img/frame_54_delay-0.1s.gif);
-    background-repeat:no-repeat;
-    background-size:cover;
+  background: url(../img/frame_54_delay-0.1s.gif);
+  background-repeat:no-repeat;
+  background-size:cover;
 }
 
 @media only screen and (max-width: 400px) {
 
-.cringe4{
-  height:200%;
-  font-size: 70px;
+  .classSelection{
+    height:200%;
+    font-size: 70px;
 
-}
+  }
 
-.container{
-justify-content: flex-start;
-flex-direction:column;
+  .container{
+    justify-content: flex-start;
+    flex-direction:column;
 
-}
+  }
 
-.cringe{
-  height:20%;
-}
-.cringe:hover{
-  height:20%;
-  font-size: 70px;
-}
-footer{
-  height:28%;
-}
-h2{
-  margin: 0;
-}
-.role{
-  font-size: 60px;
-}
+  .ltank{
+    height:20%;
+  }
+  .ltank:hover{
+    height:20%;
+    font-size: 70px;
+  }
+  footer{
+    height:28%;
+  }
+  h2{
+    margin: 0;
+  }
+  .role{
+    font-size: 60px;
+  }
 
-#klp3,#klp4,#klp7,#klp8,#klp11,#klp12{
-  display: none;
-}
-.videos{
-  width: 80%;
-}
-#support,#damage,#tank{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
+  #klp3,#klp4,#klp7,#klp8,#klp11,#klp12{
+    display: none;
+  }
+  .videos{
+    width: 80%;
+  }
+  #support,#damage,#tank{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
 
 }
