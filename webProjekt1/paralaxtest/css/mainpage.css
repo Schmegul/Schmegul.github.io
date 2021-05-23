@@ -169,7 +169,7 @@ margin-bottom:10px;
     background-size:cover;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 400px) {
 
 .cringe4{
   height:200%;
@@ -184,12 +184,32 @@ flex-direction:column;
 }
 
 .cringe{
-  height:25%;
+  height:20%;
 }
 .cringe:hover{
-  height:25%;
+  height:20%;
   font-size: 70px;
 }
+footer{
+  height:28%;
+}
+h2{
+  margin: 0;
+}
+.role{
+  font-size: 80px;
+}
 
+#klp3,#klp4,#klp7,#klp8,#klp11,#klp12{
+  display: none;
+}
+.videos{
+  width: 80%;
+}
+#support,#damage,#tank{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
 
 }
