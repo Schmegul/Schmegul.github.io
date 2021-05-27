@@ -7,7 +7,8 @@ $(document).ready(function(){
   var newy = (window.scrollY-document.body.scrollHeight+vidheight.offsetHeight+totheight.offsetHeight);
   $(".container").show();
   $(".container").css("display", "flex");
-
+  $(".container").css("justify-content", "space-evenly");
+  $(".styled-table").hide();
 
   $("#ltank").click(function(){
 
@@ -49,10 +50,6 @@ $(document).ready(function(){
 
       $(`.hanamura-${cinge}`).css('opacity', 1);
 
-      //Math.round((vidheight.offsetHeight/35)+0.5)
-
-
-      
     }
 
     newy = (window.scrollY-document.body.scrollHeight+vidheight.offsetHeight+totheight.offsetHeight);
