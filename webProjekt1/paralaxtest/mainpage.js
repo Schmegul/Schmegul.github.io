@@ -14,7 +14,7 @@ $(document).ready(function(){
 
     window.scrollTo({
       top: document.body.scrollHeight-vidheight.offsetHeight-footer1.offsetHeight,
-      behavior: 'smooth'
+      behavior: 'smooth'  //scrollar till tank klippen
     });
 
   });
@@ -22,7 +22,7 @@ $(document).ready(function(){
 
     window.scrollTo({
       top: vidSectionHeight.offsetHeight+document.body.scrollHeight-vidheight.offsetHeight-footer1.offsetHeight,
-      behavior: 'smooth'
+      behavior: 'smooth'  //scrollar till damage klippen
     });
 
   });
@@ -30,12 +30,13 @@ $(document).ready(function(){
 
     window.scrollTo({
       top: 2*vidSectionHeight.offsetHeight+document.body.scrollHeight-vidheight.offsetHeight-footer1.offsetHeight,
-      behavior: 'smooth'
+      behavior: 'smooth'  //scrollar till support klippen
     });
 
   });
 
   document.addEventListener('scroll', function(e) {
+    
 
     // om y är t.ex. 2425 så blir det då istället 242.5 +0.5 och sedan görs den om till
     // ett heltal (int). Om sidan är 3090px lång så är antalet 309 sådana max posframes
@@ -47,9 +48,8 @@ $(document).ready(function(){
       var posframe =Math.round( ((newy/10)+0.5));
       var cinge =Math.round((posframe/4)+0.5);
       $('.hanamura').css('opacity', 0);
-
       $(`.hanamura-${cinge}`).css('opacity', 1);
-
+      //denna funktion är det som ser till att bakgrunden animeras
     }
 
     newy = (window.scrollY-document.body.scrollHeight+vidheight.offsetHeight+totheight.offsetHeight);
