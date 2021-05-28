@@ -207,7 +207,7 @@ img.stikd {
   border-radius: 4px;
   box-sizing: border-box;
 }
-#submit{
+.submit{
   width: 50%;
   background-color: #4CAF50;
   color: white;
