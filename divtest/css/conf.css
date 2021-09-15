@@ -1,0 +1,12 @@
+.conf{
+  height:530px;
+  width: 530px;
+  background-image: url(../img/pic.png);
+  z-index: 1;
+}
+.pic{
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/confetti.gif);
+  z-index:0;
+}

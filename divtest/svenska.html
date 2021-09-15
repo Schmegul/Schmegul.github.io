@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed,
+    figure, figcaption, footer, header, hgroup,
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+    }
+
+    /* Safari syntax */
+    :-webkit-full-screen {
+      background-color: white;
+    }
+
+    /* IE11 */
+    :-ms-fullscreen {
+      background-color: white;
+    }
+
+    /* Standard syntax */
+    :fullscreen {
+      background-color: white;
+    }
+
+    /* Style the button */
+    button {
+      position:fixed;
+      font-size: 2px;
+    }
+    #based, #baka{
+      height:500px; width:900px;
+    }
+    #crisp, #spicy{
+      display:none;
+    }
+    div{
+      display: flex;
+      justify-content: space-evenly;
+
+    }
+    h1{
+      font-size:520px;
+    }
+    button, iframe, img{
+      margin-top: 7.8%;
+    }
+    h2{
+      position:fixed;
+      font-size:40px;
+      margin-top:615px;
+      margin-left:37%;
+    }
+    h3{
+      position:fixed;
+      font-size:25px;
+      color:grey;
+      margin-top:635px;
+      margin-left:37%;
+    }
+  </style>
+</head>
+<body>
+    <button style="margin-top:0%;" onclick="openFullscreen();">Open</button>
+    <h2>I Have a Dream</h2><br><h3>Martin Luther King Jr.</h3>
+  <div>
+
+  <h1>{</h1>
+  <button id="pog" style="margin-left:100px; display:none;" onclick="wholesome();">Last</button>
+  <button id="butt" style="margin-left:50px; display:none;" onclick="cringe();">Next</button>
+  <iframe id="crisp" src="https://www.youtube.com/embed/smEqnnklfYs?start=554" width="900px" height="500px"></iframe>
+  <iframe id="spicy" src="https://www.youtube.com/embed/smEqnnklfYs?start=748" width="900px" height="500px"></iframe>
+  <img id="based" src="img/nedladdning.jfif" alt="mrt">
+  <img id="baka" src="img/mrt.jpg" alt="m" style="display: none;">
+  <h1>}</h1>
+  </div>
+  <script>
+    var elem = document.documentElement;
+    var x = document.getElementById("based");
+    var y = document.getElementById("spicy");
+    var k = document.getElementById("baka");
+    var t = document.getElementById("crisp");
+    function openFullscreen() {
+      if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+      } else if (elem.webkitRequestFullscreen) { /* Safari */
+        elem.webkitRequestFullscreen();
+      } else if (elem.msRequestFullscreen) { /* IE11 */
+        elem.msRequestFullscreen();
+      }
+    }
+
+    function cringe(){
+      if (x.style.display === "none") {
+        k.style.display = "none";
+        t.style.display = "none";     //k och t är fel och "none" och "block" ska sättas in i rätt funktion
+        x.style.display = "block";
+        y.style.display = "none";
+      } else {
+        x.style.display = "none";
+        y.style.display = "none";
+        k.style.display = "none";
+        t.style.display = "block";
+      }
+    }
+    function wholesome(){
+
+      if (k.style.display === "none") {
+        x.style.display = "none";
+        y.style.display = "none";
+        k.style.display = "block";
+        t.style.display = "none";
+      } else {
+        x.style.display = "none";
+        k.style.display = "none";
+        t.style.display = "none";
+        y.style.display = "block";
+      }
+    }
+    document.onkeydown = checkKey;
+
+function checkKey(e) {
+
+    e = e || window.event;
+
+    if (e.keyCode == '37') {
+        // left arrow
+        document.getElementById("butt").click();
+        console.log("left");
+    }
+    else if (e.keyCode == '39') {
+        // right arrow
+        document.getElementById("pog").click();
+        console.log("right");
+    }
+
+
+}
+
+
+  </script>
+
+
+</body>
+</html>
